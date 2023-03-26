@@ -103,7 +103,7 @@ export default function AppFunctional(props) {
       x: location.x,
       y: location.y,
       steps:steps,
-      email:email
+      email:email,
     }
 
     axios
@@ -118,7 +118,11 @@ export default function AppFunctional(props) {
     })
     .finally(() => {
       setEmail(initialEmail);
+      
     })
+    setTimeout(function() {
+      reset();
+    }, 2000);
   }
 
   return (
